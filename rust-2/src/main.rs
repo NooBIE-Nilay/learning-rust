@@ -15,6 +15,7 @@ impl Rectangle {
     fn perimeter(&self)->u32{
         2*(self.width+self.length)
     }
+    // Kind Of Static Function
     fn test()->u8{
         return 123;
     }

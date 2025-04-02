@@ -21,5 +21,7 @@
 
 # Structs
 
-- &self is same as this
-  impl is a keyword, that implements/links a function to a struct, like some js classes contain prototype functions.
+- &self is same as this impl
+- is a keyword, that implements/links a function to a struct, like some js classes contain prototype functions.
+- any function that doesn;t use self is considered a static function and can be called by the struct name followed by :: and the static function name
+- Ex: Rectangle::test();
