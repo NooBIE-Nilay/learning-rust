@@ -18,3 +18,8 @@
 - Variables are immutable by default;
   -- let a:&str="abc";
   -- &a and a as result in same output? Quite Intresting
+
+# Structs
+
+- &self is same as this
+  impl is a keyword, that implements/links a function to a struct, like some js classes contain prototype functions.

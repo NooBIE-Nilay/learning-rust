@@ -4,7 +4,29 @@ struct User{
     _last_name: String,
     _age:u8
 }
+struct Rectangle {
+    width: u32,
+    length: u32,
+} 
+impl Rectangle {
+    fn area(&self)->u32{
+        self.width*self.length
+    }
+    fn perimeter(&self)->u32{
+        2*(self.width+self.length)
+    }
+    fn test()->u8{
+        return 123;
+    }
+}
 fn main() {
+    let shape1 = Rectangle{width:30,length: 23};
+    println!("The area of the reactangle is {}",shape1.area());
+    println!("The Perimeter of the reactangle is {}",shape1.perimeter());
+    // println!("The Test of the reactangle is {}",shape1.test()) // Error
+    println!("The Test of the reactangle is {}",Rectangle::test());
+
+    /*
     println!("Hello, World!");
     let user1 = User{
         first_name: String::from("Nilay"),
@@ -13,6 +35,8 @@ fn main() {
     };
     let user2 = input_user("Harkirat".to_string(),String::from("Singh"),32);
     println!("Hello {} & {}",user1.first_name,user2.first_name);
+    */
+    
     // println!("Hello {user1.first_name} & {}",user2.first_name);  // Filed Access isn't supported in formated string
    /* 
    let test_var:u8=123;
@@ -23,7 +47,7 @@ fn main() {
    */
 }
 
-fn input_user(first_name:String, last_name:String, age:u8)->User{
+fn _input_user(first_name:String, last_name:String, age:u8)->User{
     User{
         first_name,
         _last_name: last_name,
