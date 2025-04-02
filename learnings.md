@@ -1,5 +1,6 @@
 # Learnings
 
+## Basics
 - Rustaceans // Rust Enthusiasts
 
 - rustc <filename.rs>
@@ -19,7 +20,7 @@
   -- let a:&str="abc";
   -- &a and a as result in same output? Quite Intresting
 
-# Structs
+## Structs
 
 - &self is same as this impl
 - is a keyword, that implements/links a function to a struct, like some js classes contain prototype functions.
