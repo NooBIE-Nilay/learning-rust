@@ -1,13 +1,37 @@
 use std::io;
-fn main() {
-    println!("Hello, world!");
-    let test_var:u8=123;
-    println!("{test_var}");
-    // println!("{test_var+2}");// Error
-    println!("{}",test_var+46);
-    input_number();
+struct User{
+    first_name:String,
+    _last_name: String,
+    _age:u8
 }
-fn input_number(){
+fn main() {
+    println!("Hello, World!");
+    let user1 = User{
+        first_name: String::from("Nilay"),
+        _last_name: "Banerjee".to_string(),
+        _age: 21
+    };
+    let user2 = input_user("Harkirat".to_string(),String::from("Singh"),32);
+    println!("Hello {} & {}",user1.first_name,user2.first_name);
+    // println!("Hello {user1.first_name} & {}",user2.first_name);  // Filed Access isn't supported in formated string
+   /* 
+   let test_var:u8=123;
+   println!("{test_var}");
+   // println!("{test_var+2}");// Error
+   println!("{}",test_var+46);
+   input_number();
+   */
+}
+
+fn input_user(first_name:String, last_name:String, age:u8)->User{
+    User{
+        first_name,
+        _last_name: last_name,
+        _age: age
+    }
+}
+
+fn _input_number(){
     println!("Enter A Number");
     let mut guessed_number = String::new();
     io::stdin().read_line(&mut guessed_number).expect("Failed To Read Line");
